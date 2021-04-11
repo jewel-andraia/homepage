@@ -4,8 +4,16 @@ html, body  {
 	border: 0;
 	padding: 0;
 	background:  white;
+    color: #ccc;
 	width: 100%;
 	height: 100%; 
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html, body {
+        color: antiquewhite;
+        background: #333;
+    }
 }
 
 address { font-style: normal }
@@ -27,10 +35,29 @@ a, a:link, a:visited, a:active {
 a:hover { 
     color: #3388DD;
 }
+@media screen and (prefers-color-scheme: dark) {
+    a, a:link, a:visited, a:active {  
+        color: #99bbee;
+    }
+    a:hover { 
+        color: #99ccff;
+    }
+}
 a, a:link, a:visited {  text-decoration: none; }
 a:active, a:hover { text-decoration: underline; }
 
-h1 a, h1 a:link, h1 a:visited { color: black; }
+h1 a, 
+h1 a:link, 
+h1 a:visited { 
+    color: black;
+}
+@media screen and (prefers-color-scheme: dark) {
+    h1 a, 
+    h1 a:link, 
+    h1 a:visited { 
+        color: #ddd;
+    }
+}
 /*h1 a:active, h1 a:hover { color: #333; }*/
 
 header, #body { 
@@ -100,6 +127,35 @@ header h1 {
     width: 375px;
     font-family: Verdana, sans-serif;
     color: #444444;
+}
+
+.box > * {
+    position: relative;
+    z-index: 10;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+.box::after {
+
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: inherit;
+    background-color: rgba(30, 30, 30, 0.85);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    .box {
+        background-color: #444;
+        color: antiquewhite;
+    }
 }
 
 .box h2 {
@@ -172,11 +228,11 @@ header h1 {
 }
 
 
-#bio { background-image: url('assets/bg1.png'); }
-#work { background-image: url('assets/bg2.png'); }
-#journals { background-image: url('assets/bg4.png'); }
-#proj { background-image: url('assets/bg4.png'); }
-#footer { background-image: url('assets/bg5.png'); }
+.box#bio { background-image: url('assets/bg1.png'); }
+.box#work { background-image: url('assets/bg2.png'); }
+.box#journals { background-image: url('assets/bg4.png'); }
+.box#proj { background-image: url('assets/bg4.png'); }
+.box#misc { background-image: url('assets/bg5.png'); }
 
 #footer {
 	text-align: center;
