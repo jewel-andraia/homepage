@@ -107,6 +107,7 @@ header h1 {
 }
 #resume {
     float: right;
+    text-align: right;
     margin: 2em;
 }
 #nav {
