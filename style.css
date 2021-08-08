@@ -136,11 +136,13 @@ header h1 {
     position: relative;
     margin: 5px 0 10px 10px;
     border: 3px gray solid;
+    border-radius: 30px;
+    overflow: hidden;
     padding: 20px 10px 10px;
     background-color:  #ffffff;
     background-position: right -50px;
     background-repeat: no-repeat;
-    min-height: 330px;
+    min-height: 200px;
     max-height: 633px;
     width: 375px;
     font-family: Verdana, sans-serif;
@@ -185,7 +187,7 @@ header h1 {
     font-family: Georgia, serif;
 }
 .box ul {
-    margin: 40px 0 0;
+    margin: 40px 20px 0 0;
 }
 
 .box li {
@@ -200,9 +202,17 @@ header h1 {
 }
 
 
-.box li, .box dt, .box dd {
-    margin-top: 30px;
-    min-height: 50px;
+.box li, 
+.box dt, 
+.box dd {
+    margin-top: 15px;
+    min-height: 40px;
+}
+.box.compact li, 
+.box.compact dt, 
+.box.compact dd {
+    margin-top: 10px;
+    min-height: 20px;
 }
 .box dt, .box dd {
     float: left;
@@ -215,9 +225,9 @@ header h1 {
 
 .badge-frame {
     position: relative;
-    top: -22px;
-    width: 64px;
-    height: 64px;
+    top: -10px;
+    width: 40px;
+    height: 40px;
     background: white;
     border-radius: 15px;
 }
@@ -228,23 +238,11 @@ header h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -16px;
-    margin-top: -16px;
-    width: 32px;
-    height: 32px;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
 }
-
-#github img {
-    margin-top: -12px;
-    margin-left: -16px;
-    width: 32px;
-    height: 24px;
-}
-#twitter img {
-    margin-top: -13px;
-    height: 26px;
-}
-
 
 .box#bio { background-image: url('assets/bg1.png'); }
 .box#work { background-image: url('assets/bg2.png'); }
