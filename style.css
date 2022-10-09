@@ -75,6 +75,7 @@ header {
 
 header address {
     margin-top: 0.5em;
+    margin-left: 110px;
 }
 header .logo {
     float: left;
